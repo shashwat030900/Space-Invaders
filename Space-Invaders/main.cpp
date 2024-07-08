@@ -24,7 +24,8 @@ int main()
         window.clear(sf::Color::Blue);
 
         // Display whatever you draw
-        window.display();
+        window.display(); //thanks for helping
+
     }
 
     return 0;
