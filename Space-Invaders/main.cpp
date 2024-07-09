@@ -4,7 +4,7 @@
 int main()
 {
     // Define the video mode (dimensions)
-    sf::VideoMode videoMode = sf::VideoMode(800, 600);
+    sf::VideoMode videoMode = sf::VideoMode(1920, 1280);
 
     // Create a window object with specific dimensions and a title
     sf::RenderWindow window(videoMode, "SFML Window");
@@ -41,6 +41,27 @@ int main()
         Triangle.setPoint(2, sf::Vector2f(400, 150));
         Triangle.setFillColor(sf::Color::Blue);
         window.draw(Triangle);
+        sf::Texture texture;
+        texture.loadFromFile("assets/textures/outscal_logo.png");
+        sf::Sprite Outscal_sprite;
+        Outscal_sprite.setTexture(texture);
+        Outscal_sprite.setPosition(900, 200);
+        Outscal_sprite.setRotation(45);
+        Outscal_sprite.setScale(0.35, 0.45);
+        window.draw(Outscal_sprite);
+        sf::Font font;
+        font.loadFromFile("assets/fonts/bubbleBobble.ttf");
+        sf::Text text("My name is Shashwat Dubey.", font, 25);
+        text.setFillColor(sf::Color::Yellow);
+        text.setPosition(500, 800);
+        window.draw(text);
+        sf::Font font_2;
+        font_2.loadFromFile("assets/fonts/OpenSans.ttf");
+        sf::Text text_2("SFML is Awesome!", font, 25);
+        text_2.setFillColor(sf::Color::White);
+        text_2.setPosition(400, 900);
+        window.draw(text_2);
+
 
         // Display whatever you draw
         window.display(); //thanks for helping 
