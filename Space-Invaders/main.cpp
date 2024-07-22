@@ -7,7 +7,7 @@ class Player {
 private:
     int Health = 3;
     sf::Vector2f position = sf::Vector2f(200.0f, 100.0f);
-    int movement_speed = 5;
+    int movement_speed = 1;
     int player_score = 0;
     
 public:  
@@ -19,13 +19,19 @@ public:
     Vector2f getPosition() {
         return position;
     }
-      
+    void move(float offsetX) {
+        position.x += offsetX;
+    }
+    int getMoveSpeed() {
+        return movement_speed;
+    }
+
 };
 
 int main() {
     
 
-    sf::VideoMode videoMode = sf::VideoMode(800, 600);
+    sf::VideoMode videoMode = sf::VideoMode(1920, 1080);
     sf::RenderWindow window(videoMode, "SFML Window");
 
     Player Player;
@@ -38,10 +44,10 @@ int main() {
                 window.close();
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-            Player.move();
+            Player.move(-1.0f * Player.getMoveSpeed());
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-            Player.move();
+            Player.move(1.0f * Player.getMoveSpeed());
 
         }
         window.clear(sf::Color::Green);
