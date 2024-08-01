@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "header/gameService.h"
+#include "headers/gameservice.h"
 using namespace std;
 using namespace sf;
 
@@ -37,8 +37,8 @@ int main() {
 
     
     Player player;
-    Player.player_texture.loadFromFile("assets/textures/player_ship.png");
-    Player.player_sprite.setTexture(Player.player_texture);
+    player.player_texture.loadFromFile("assets/textures/player_ship.png");
+    player.player_sprite.setTexture(player.player_texture);
         while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -46,15 +46,15 @@ int main() {
                 window.close();
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-            Player.move(-1.0f * Player.getMoveSpeed());
+            player.move(-1.0f * player.getMoveSpeed());
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-            Player.move(1.0f * Player.getMoveSpeed());
+            player.move(1.0f * player.getMoveSpeed());
 
         }
         window.clear(sf::Color::Green);
-        Player.player_sprite.setPosition(Player.getPosition());
-        window.draw(Player.player_sprite);
+        player.player_sprite.setPosition(player.getPosition());
+        window.draw(player.player_sprite);
         window.display();
     }
         gameService game_service; 
