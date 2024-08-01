@@ -1,14 +1,22 @@
+#include <SFML/Graphics.hpp>
 
 #include <SFML/Graphics.hpp>
 
 int main()
 {
     // Define the video mode (dimensions)
+<<<<<<< Updated upstream
     sf::VideoMode videoMode = sf::VideoMode(1920, 1280);
 
     // Create a window object with specific dimensions and a title
     sf::RenderWindow window(videoMode, "SFML Window");
    
+=======
+    sf::VideoMode videoMode = sf::VideoMode(1920, 1080);
+
+    // Create a window object with specific dimensions and a title
+    sf::RenderWindow window(sf::VideoMode::getFullscreenModes()[0], "Fullscreen Window", sf::Style::Fullscreen);
+>>>>>>> Stashed changes
 
 
 
@@ -22,6 +30,7 @@ int main()
 
 
         // Clear the window
+<<<<<<< Updated upstream
         window.clear(sf::Color::Black);
         sf::CircleShape circle(50); // Radius 50
         circle.setFillColor(sf::Color::Red);
@@ -68,5 +77,13 @@ int main()
 
     }
     
+=======
+        window.clear(sf::Color::Blue);
+
+        // Display whatever you draw
+        window.display();
+    }
+
+>>>>>>> Stashed changes
     return 0;
 }
