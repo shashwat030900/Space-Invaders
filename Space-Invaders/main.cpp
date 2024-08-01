@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "header/gameService.h"
 using namespace std;
 using namespace sf;
 
@@ -34,7 +35,8 @@ int main() {
     sf::VideoMode videoMode = sf::VideoMode(1920, 1080);
     sf::RenderWindow window(videoMode, "SFML Window");
 
-    Player Player;
+    
+    Player player;
     Player.player_texture.loadFromFile("assets/textures/player_ship.png");
     Player.player_sprite.setTexture(Player.player_texture);
         while (window.isOpen()) {
@@ -55,6 +57,15 @@ int main() {
         window.draw(Player.player_sprite);
         window.display();
     }
+        gameService game_service; 
+        game_service.ignite();
+
+        
+        while (game_service.isRunning())
+        {
+            game_service.update();
+            game_service.render();
+        }
 
     return 0;
 }
