@@ -132,11 +132,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="gameservice\gameservice\gameservice.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source\gamesevice.cpp" />
+    <ClCompile Include="source\GraphicService.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\gamesevice.h" />
+    <ClInclude Include="headers\ServiceLocator.h" />
+    <ClInclude Include="header\GraphicsService.h" />
+    <ClInclude Include="header\servicelocator.h" />
+    <ClInclude Include="header\header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
