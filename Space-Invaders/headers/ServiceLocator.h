@@ -1,6 +1,6 @@
 #pragma once
-#include "../Header/GraphicService.h"
-
+#include "../header/GraphicService.h"
+#include "../header/EventService.h"
 class ServiceLocator
 {
 private:

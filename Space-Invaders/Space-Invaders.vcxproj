@@ -134,13 +134,16 @@
   <ItemGroup>
     <ClCompile Include="gameservice\gameservice\gameservice.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\EventService.cpp" />
     <ClCompile Include="source\gamesevice.cpp" />
     <ClCompile Include="source\GraphicService.cpp" />
+    <ClCompile Include="source\Service_Locator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\ServiceLocator.h" />
-    <ClInclude Include="header\GraphicsService.h" />
-    <ClInclude Include="header\servicelocator.h" />
+    <ClInclude Include="header\EventService.h" />
+    <ClInclude Include="header\GameService.h" />
+    <ClInclude Include="header\GraphicService.h" />
     <ClInclude Include="header\header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -17,7 +17,8 @@ private:
 	sf::RenderWindow* game_window; // ptr to a RenderWindow
 
 	void setVideoMode(); // Method for setting our video mode
-	void onDestroy(); // method to run when window is deleted
+	void onDestroy(); // method to run when window is deleted	
+	void initializeVariables();	
 
 public:
 	GraphicService();
