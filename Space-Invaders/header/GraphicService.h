@@ -33,6 +33,6 @@ public:
 	void render(); //..
 	bool isGameWindowOpen(); //check if the window is open
 
-	sf::RenderWindow* getGameWindow(); //getter for the game window instance
+	sf::RenderWindow* getGameWindow(); //getter for the game window instance change
 	sf::Color getWindowColor();//get the color
 };
