@@ -30,12 +30,19 @@ void PlayerService::render()
 
 void PlayerService::processPlayerInput()
 {
-	// Handle keyboard input
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-		move(-1.0f * getMoveSpeed());
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		move(1.0f * getMoveSpeed());
+	EventService* event_service = ServiceLocator::getInstance()->getEventService(); //get the event service object created in service locator
+
+	if (event_service->isKeyboardEvent()) //check if a key has been pressed
+	{
+		if (event_service->pressedLeftKey())
+		{
+			move(-1.0f * getMoveSpeed());
+		}
+
+		if (event_service->pressedRightKey())
+		{
+			move(1.0f * getMoveSpeed());
+		}
 	}
 }
 
