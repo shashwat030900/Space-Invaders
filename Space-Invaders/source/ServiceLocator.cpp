@@ -1,5 +1,6 @@
 #include "../Header/ServiceLocator.h"
-
+#include "../Header/TimeService.h"
+#include "../Header/EventService.h"
 ServiceLocator::ServiceLocator()
 {
 	graphic_service = nullptr;
