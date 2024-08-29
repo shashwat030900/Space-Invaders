@@ -1,29 +1,16 @@
-<<<<<<< Updated upstream
+
 #pragma once
-=======
+
 
 #pragma once
 #include <SFML/Graphics.hpp>
-
+#include "../../Header/Player/PlayerController.h"
 class PlayerService
 {
 
 private:
 
-    int health = 3;
-    sf::Vector2f position = sf::Vector2f(200.0f, 100.0f);
-    int movement_speed = 5;
-    int player_score = 0;
-
-    const sf::String player_texture_path = "assets/textures/player_ship.png";
-
-    sf::Texture player_texture;
-    sf::Sprite player_sprite;
-
-    sf::RenderWindow* game_window; //as always
-
-    void initializePlayerSprite();
-    void processPlayerInput();
+PlayerController* player_controller
 
 public:
 
@@ -34,9 +21,6 @@ public:
     void update();
     void render();
 
-    void move(float offsetX);
-    int getMoveSpeed();
-    sf::Vector2f getPlayerPosition();
+   
 
 };
->>>>>>> Stashed changes
